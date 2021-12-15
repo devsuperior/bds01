@@ -8,7 +8,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Comparator;
 import java.util.List;
 
 @RestController
@@ -22,8 +21,6 @@ public class DepartmentController {
     public ResponseEntity<List<DepartmentDTO>> findAll() {
 
         List<DepartmentDTO> list = departmentService.findAll();
-        list.sort(Comparator.comparing(e -> e.getName()));
-
         return ResponseEntity.ok().body(list);
     }
 }
