@@ -2,8 +2,7 @@ package com.devsuperior.bds01.services;
 
 import com.devsuperior.bds01.dto.DepartmentDTO;
 import com.devsuperior.bds01.entities.Department;
-import com.devsuperior.bds01.entities.Employee;
-import com.devsuperior.bds01.repository.DepartmentRepository;
+import com.devsuperior.bds01.repositories.DepartmentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -14,7 +13,7 @@ import java.util.List;
 public class DepartmentService {
 
     @Autowired
-    DepartmentRepository departmentRepository;
+    private DepartmentRepository departmentRepository;
 
     public List<DepartmentDTO> findAll() {
 

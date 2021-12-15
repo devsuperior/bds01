@@ -16,7 +16,7 @@ import java.util.List;
 public class DepartmentController {
 
     @Autowired
-    DepartmentService departmentService;
+    private DepartmentService departmentService;
 
     @GetMapping
     public ResponseEntity<List<DepartmentDTO>> findAll() {
