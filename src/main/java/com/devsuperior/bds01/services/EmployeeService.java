@@ -29,7 +29,7 @@ public class EmployeeService {
 		Employee entity = new Employee();
 		entity.setName(dto.getName());
 		entity.setEmail(dto.getEmail());
-		entity.setDepartment(new Department(dto.getDepartmentId(), null));
+		entity.setDepartment(new Department(dto.getDepartmentId(), null)); //Pega o id do departamento
 		entity = repository.save(entity);
 		
 		
